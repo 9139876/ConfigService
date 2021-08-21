@@ -8,6 +8,6 @@ namespace ConfigService.Api.Models
 {
     public class GetConfigResponse
     {
-        public List<ConfigRaw> ConfigRaws { get; set; } = new List<ConfigRaw>();
+        public List<ConfigRow> ConfigRows { get; set; } = new List<ConfigRow>();
     }
 }

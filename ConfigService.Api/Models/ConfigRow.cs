@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConfigService.Api.Models
 {
-    public class ConfigRaw
+    public class ConfigRow
     {
         public string Key { get; set; }
 

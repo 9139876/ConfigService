@@ -12,16 +12,16 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ConfigService.DAL.Repositories.Implementation
 {
-    internal class ConfigRepository : BaseRepository<ConfigRawEntity>, IConfigRepository
+    internal class ConfigRepository : BaseRepository<ConfigRowEntity>, IConfigRepository
     {
         private readonly IConfigDbContext _dbContext;
 
-        public ConfigRepository(IConfigDbContext dbContext) : base(dbContext.ConfigRaws)
+        public ConfigRepository(IConfigDbContext dbContext) : base(dbContext.ConfigRows)
         {
             _dbContext = dbContext;
         }
 
-        public async Task<List<ConfigRawEntity>> GetConfigsForApplication(GetConfigRequest request)
+        public async Task<List<ConfigRowEntity>> GetConfigsForApplication(GetConfigRequest request)
         {
             return await DbSet.Where(x => x.Environment == request.Environment && x.Application == request.Application).ToListAsync();
         }

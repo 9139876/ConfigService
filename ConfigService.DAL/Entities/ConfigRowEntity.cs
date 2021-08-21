@@ -9,8 +9,8 @@ using ConfigService.Api.Enum;
 
 namespace ConfigService.DAL.Entities
 {
-    [Table("ConfigRaws")]
-    public class ConfigRawEntity
+    [Table("ConfigRows")]
+    public class ConfigRowEntity
     {
         [Key]
         public int Id { get; set; }

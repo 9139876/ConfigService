@@ -27,11 +27,11 @@ namespace ConfigService.WebApi.Controllers
         {
             request.RequiredNotNull(nameof(request));
 
-            var configRaws = await _configRepository.GetConfigsForApplication(request);
+            var configRows = await _configRepository.GetConfigsForApplication(request);
 
             return new GetConfigResponse()
             {
-                ConfigRaws = configRaws.Select(x => new ConfigRaw()
+                ConfigRows = configRows.Select(x => new ConfigRow()
                 {
                     Key = x.Key,
                     Value = x.Value,

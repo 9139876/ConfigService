@@ -15,6 +15,6 @@ namespace ConfigService.DAL.Internal.Implementation
         {
         }
 
-        public DbSet<ConfigRawEntity> ConfigRaws { get; set; }
+        public DbSet<ConfigRowEntity> ConfigRows { get; set; }
     }
 }

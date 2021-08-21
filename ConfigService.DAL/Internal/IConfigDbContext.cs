@@ -11,6 +11,6 @@ namespace ConfigService.DAL.Internal
 {
     public interface IConfigDbContext : IBaseDbContext
     {
-        DbSet<ConfigRawEntity> ConfigRaws { get; set; }
+        DbSet<ConfigRowEntity> ConfigRows { get; set; }
     }
 }

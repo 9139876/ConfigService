@@ -10,8 +10,8 @@ using ConfigService.DAL.Entities;
 
 namespace ConfigService.DAL.Repositories
 {
-    public interface IConfigRepository : IBaseRepository<ConfigRawEntity>
+    public interface IConfigRepository : IBaseRepository<ConfigRowEntity>
     {
-        Task<List<ConfigRawEntity>> GetConfigsForApplication(GetConfigRequest request);
+        Task<List<ConfigRowEntity>> GetConfigsForApplication(GetConfigRequest request);
     }
 }
