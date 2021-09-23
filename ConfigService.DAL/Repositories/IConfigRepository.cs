@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using CommonLibraries.Config.Models;
 using CommonLibraries.EF;
-using ConfigService.Api.Enum;
-using ConfigService.Api.Models;
 using ConfigService.DAL.Entities;
 
 namespace ConfigService.DAL.Repositories

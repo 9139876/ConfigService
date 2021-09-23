@@ -1,12 +1,6 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using CommonLibraries.Core.Extensions;
 using CommonLibraries.Web;
 using ConfigService.DAL;
@@ -15,6 +9,12 @@ namespace ConfigService.WebApi
 {
     public class Startup : CommonLibraryStartup
     {
+        protected override bool _loadFromConfigService => false;
+
+        protected override bool _reloadAppSettingsOnChange => false;
+
+        protected override bool _requiredConfigService => false;
+
         protected override void ConfigureApplication(IApplicationBuilder app, IWebHostEnvironment env)
         {
             ConfigureWebApi(app, env);

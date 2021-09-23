@@ -1,15 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Threading.Tasks;
+using CommonLibraries.Config.Models;
 using CommonLibraries.Core.Extensions;
-using ConfigService.Api.Models;
 using ConfigService.DAL.Repositories;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ConfigService.WebApi.Controllers
 {
-    [Route("api/get")]
+    [Route("api")]
     [ApiController]
     public class GetConfigController
     {

@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
+using CommonLibraries.Config.Models;
 using CommonLibraries.RemoteCall;
 using CommonLibraries.RemoteCall.Services;
-using ConfigService.Api.Models;
 using Microsoft.Extensions.Configuration;
 
 namespace ConfigService.Api.Services.Implementation
@@ -19,6 +15,6 @@ namespace ConfigService.Api.Services.Implementation
         protected override string _apiSchemeAndHostConfigKey { get; set; } = "ConfigService.Api.SchemeAndHost";
 
         public async Task<GetConfigResponse> GetConfig(GetConfigRequest request)
-            => await ExecutePostAsync<GetConfigResponse, GetConfigRequest>("api/get/get-config", request);
+            => await ExecutePostAsync<GetConfigResponse, GetConfigRequest>("api/get-config", request);
     }
 }

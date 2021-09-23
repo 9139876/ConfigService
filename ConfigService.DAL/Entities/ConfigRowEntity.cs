@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using CommonLibraries.Config.Enums;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ConfigService.Api.Enum;
 
 namespace ConfigService.DAL.Entities
 {
