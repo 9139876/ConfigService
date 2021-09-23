@@ -4,6 +4,7 @@ using CommonLibraries.Config.Models;
 using CommonLibraries.Core.Extensions;
 using ConfigService.DAL.Repositories;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 
 namespace ConfigService.WebApi.Controllers
 {
@@ -12,11 +13,14 @@ namespace ConfigService.WebApi.Controllers
     public class GetConfigController
     {
         private readonly IConfigRepository _configRepository;
+        private readonly IConfiguration _configuration;
 
         public GetConfigController(
-            IConfigRepository configRepository)
+            IConfigRepository configRepository,
+            IConfiguration configuration)
         {
             _configRepository = configRepository;
+            _configuration = configuration;
         }
 
         [HttpPost]
